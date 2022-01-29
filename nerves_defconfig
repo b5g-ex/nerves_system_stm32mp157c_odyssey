@@ -36,7 +36,6 @@ BR2_LINUX_KERNEL_LZO=y
 BR2_LINUX_KERNEL_DTS_SUPPORT=y
 BR2_LINUX_KERNEL_INTREE_DTS_NAME="stm32mp157c-seeed-npi stm32mp1-seeed-ap6236-overlay stm32mp1-seeed-i2c4-overlay stm32mp1-seeed-lcd-01-overlay stm32mp1-seeed-pwm-overlay stm32mp1-seeed-spi5-overlay stm32mp1-seeed-uart7-overlay stm32mp1-seeed-usart2-overlay stm32mp1-MCP2517FD-can0-overlay"
 BR2_LINUX_KERNEL_DTB_OVERLAY_SUPPORT=y
-BR2_LINUX_KERNEL_INSTALL_TARGET=y
 BR2_LINUX_KERNEL_NEEDS_HOST_OPENSSL=y
 BR2_PACKAGE_BUSYBOX_CONFIG="${BR2_EXTERNAL_NERVES_PATH}/board/nerves-common/busybox.config"
 BR2_PACKAGE_F2FS_TOOLS=y

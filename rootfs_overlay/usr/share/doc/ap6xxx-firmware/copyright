@@ -1,0 +1,8 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: ap6xxx-firmware
+Source: https://gitee.com/turmary/stm32mp1-bootcfg/tree/ap6xxx-fw
+
+Files:     lib/
+Copyright: 2018 Peter Yang <turmary@126.com>
+License:   MIT
+

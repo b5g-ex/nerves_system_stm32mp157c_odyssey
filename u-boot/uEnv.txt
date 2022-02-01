@@ -9,11 +9,25 @@ uboot_overlay_addr2=/boot/stm32mp1-seeed-usart2-overlay.dtb
 uboot_overlay_addr3=/boot/stm32mp1-seeed-i2c4-overlay.dtb
 
 set_uname=setenv uname_r 5.10.83-armv7-lpae-x58
-set_addrs=setenv img_addr 0xC2000000 && setenv dtb_addr 0xC4000000
+set_addrs=setenv img_addr 0xC2000000;\
+          setenv dtb_addr 0xC4000000;\
+          setenv dto_addr 0xC4400000
+
+set_buffer=setenv fdt_buffer 0x60000
 
 load_img=fatload mmc 0:4 ${img_addr} /vmlinuz-${uname_r}
 load_dtb=fatload mmc 0:4 ${dtb_addr} /dtbs/${uname_r}/stm32mp157c-seeed-npi.dtb
+load_dto=fatload mmc 0:4 ${dto_addr} /dtbs/${uname_r}/stm32mp1-seeed-ap6236-overlay.dtb;\
+         fdt addr ${dtb_addr}; fdt resize ${fdt_buffer};fdt apply ${dto_addr}; fdt resize ${fdt_buffer};\
+         fatload mmc 0:4 ${dto_addr} /dtbs/${uname_r}/stm32mp1-seeed-spi5-overlay.dtb;\
+         fdt addr ${dtb_addr}; fdt resize ${fdt_buffer};fdt apply ${dto_addr}; fdt resize ${fdt_buffer};\
+         fatload mmc 0:4 ${dto_addr} /dtbs/${uname_r}/stm32mp1-seeed-usart2-overlay.dtb;\
+         fdt addr ${dtb_addr}; fdt resize ${fdt_buffer};fdt apply ${dto_addr}; fdt resize ${fdt_buffer};\
+         fatload mmc 0:4 ${dto_addr} /dtbs/${uname_r}/stm32mp1-seeed-i2c4-overlay.dtb;\
+         fdt addr ${dtb_addr}; fdt resize ${fdt_buffer};fdt apply ${dto_addr}; fdt resize ${fdt_buffer};
 
-go_boot=setenv bootargs "console=ttySTM0,115200 root=/dev/mmcblk0p5 rootwait coherent_pool=1M" && bootz ${img_addr} - ${dtb_addr}
+go_boot=setenv bootargs "console=ttySTM0,115200 root=/dev/mmcblk0p5 rootwait coherent_pool=1M";\
+        bootz ${img_addr} - ${dtb_addr}
 
-uenvcmd=run set_uname;run set_addrs;run load_img;run load_dtb;run go_boot
+uenvcmd=run set_uname;run set_addrs;run load_img;run load_dtb;run set_buffer;run load_dto;run go_boot
+

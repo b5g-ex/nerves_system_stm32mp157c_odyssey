@@ -2,6 +2,9 @@
 
 This is the base Nerves System configuration for the [ODYSSEY - STM32MP157C](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html).
 
+![ODYSSEY - STM32MP157C](assets/images/stm32mp157c_odyssey.png)
+This image is from [Seeed](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html).
+
 | Feature              | Description                                                 |
 | -------------------- | ----------------------------------------------------------- |
 | CPU                  | 650MHz Dual-core Arm-Cortex-A7 with Cortex-M4 integrated    |

@@ -20,7 +20,7 @@ This image is from [Seeed](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-446
 | Camera               | DVP camera interface, not supported yet                     |
 | Ethernet             | Yes (eth0)                                                  |
 | WiFi                 | Yes (wlan0)                                                 |
-| Bluetooth            | Yes (hci0)                                                  |
+| Bluetooth            | Yes (hci0), not confirmed yet                               |
 | Audio                | 3.5mm audio interface, not supported yet                    |
 | RTC                  | 3VRTC battery interface                                     |
 
@@ -44,12 +44,13 @@ repository and update as described in [Making custom systems](https://hexdocs.pm
 The board has one 1 Gbps Ethernet interface and one WiFi interface. Here's an example `:vintage_net`
 configuration that enables both of them:
 
+For WiFi configuration, see. https://hexdocs.pm/vintage_net_wifi/VintageNetWiFi.html
+
 ```elixir
 config :vintage_net,
   regulatory_domain: "US",
   config: [
     {"eth0", %{type: VintageNetEthernet, ipv4: %{method: :dhcp}}},
-    # for WiFi configuration, see. https://hexdocs.pm/vintage_net_wifi/VintageNetWiFi.html
     {"wlan0", %{type: VintageNetWiFi}}
   ]
 ```

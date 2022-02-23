@@ -88,7 +88,6 @@ defmodule NervesSystemStm32mp157cOdyssey.MixProject do
 
   defp package do
     [
-      maintainers: ["takasehideki", "pojiro"],
       files: package_files(),
       licenses: ["Apache-2.0"],
       links: %{"GitHub" => @source_url}

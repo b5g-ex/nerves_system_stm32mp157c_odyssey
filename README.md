@@ -44,7 +44,7 @@ repository and update as described in [Making custom systems](https://hexdocs.pm
 The board has one 1 Gbps Ethernet interface and one WiFi interface. Here's an example `:vintage_net`
 configuration that enables both of them:
 
-For WiFi configuration, see. https://hexdocs.pm/vintage_net_wifi/VintageNetWiFi.html
+For WiFi configuration, see. https://hexdocs.pm/vintage_net/cookbook.html#normal-password-protected-wifi-wpa2-psk
 
 ```elixir
 config :vintage_net,

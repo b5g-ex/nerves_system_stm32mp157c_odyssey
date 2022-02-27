@@ -55,3 +55,13 @@ config :vintage_net,
   ]
 ```
 
+## Serial
+
+This board has one uart and two usart.
+
+| name as tty | name as serial | dts info   | dts info | for what                           |
+| ----------- | -------------- | ---------- | -------- | ---------------------------------- |
+| ttySTM0     | serial0        | 0x40010000 | uart4    | for debug uart besides barrel jack |
+| ttySTM1     | serial1        | 0x5c000000 | usart1   | for AP6236, so can't be used       |
+| ttySTM2     | serial2        | 0x4000e000 | usart2   | for raspi compatible uart          | 
+

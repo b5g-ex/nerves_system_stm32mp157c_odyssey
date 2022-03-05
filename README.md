@@ -15,7 +15,7 @@ This image is from [Seeed](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-446
 | GPIO, I2C, SPI       | Yes - [Elixir Circuits](https://github.com/elixir-circuits) |
 | ADC                  | No                                                          |
 | PWM                  | Yes, but no Elixir support                                  |
-| UART                 | ttySTM0                                                     |
+| UART                 | ttySTM0, ttySTM2                                            |
 | Display              | MIPI DSI display interface, not supported yet               |
 | Camera               | DVP camera interface, not supported yet                     |
 | Ethernet             | Yes (eth0)                                                  |

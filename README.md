@@ -65,3 +65,28 @@ This board has one uart and two usart.
 | ttySTM1     | serial1        | 0x5c000000 | usart1   | for AP6236, so can't be used       |
 | ttySTM2     | serial2        | 0x4000e000 | usart2   | for raspi compatible uart          | 
 
+## GPIO
+
+GPIO pins for circuits_gpio can be calculated according to the following formula,
+
+```
+pin number = <gpio chip name> * 16 + offset
+# gpio chip name is A as 0, B as 1 ...
+```
+
+So pin number of below image GPIO_H12 is 124, 7 * 16 + 12.
+
+<img src="https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/GPIO.png" width="500" />
+
+## Known limitations
+
+### eth0 MAC address changes at each boot
+
+This is because the vendor does not provide it.
+
+### Can't read input when using circuits_gpio
+
+See below issue.
+
+[Can't read input until after the output has been configured once when using circuits_gpio](https://github.com/b5g-ex/nerves_system_stm32mp157c_odyssey/issues/3)
+

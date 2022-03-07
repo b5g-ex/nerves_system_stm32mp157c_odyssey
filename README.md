@@ -90,3 +90,8 @@ See below issue.
 
 [Can't read input until after the output has been configured once when using circuits_gpio](https://github.com/b5g-ex/nerves_system_stm32mp157c_odyssey/issues/3)
 
+### Can't use GPIO_B2
+
+This is because uart4 rx uses it. See below issue.
+
+[Can't use GPIO_B2](https://github.com/b5g-ex/nerves_system_stm32mp157c_odyssey/issues/4)

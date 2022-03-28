@@ -1,3 +1,9 @@
+## v0.1.2
+
+* Changes
+  * Remove CONFIG_NETFILTER from linux defconfig.
+    This might resolve [pseudo modify file issue](https://github.com/b5g-ex/nerves_system_stm32mp157c_odyssey/issues/2), #2. 
+
 ## v0.1.1
 
 * Fixed some bugs

@@ -1,3 +1,11 @@
+## v0.2.0
+
+* Changes
+  * update: [nerves_system_br](https://github.com/nerves-project/nerves_system_br) version from 1.18.6 to 1.20.3
+    * Buildroot 2022.05
+    * Erlang/OTP 25.0.2
+  * update: [nerves](https://github.com/nerves-project/nerves) version from 1.7.16 to 1.8.0
+
 ## v0.1.2
 
 * Changes
